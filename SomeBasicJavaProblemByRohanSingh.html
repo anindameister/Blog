@@ -1,0 +1,87 @@
+<html><head><style>body {
+    color: black;
+ }
+ </style></head><body><pre><code>package RohanSingh;
+
+import java.util.ArrayList;
+
+<span class="hljs-comment">/**
+ * the sum of n natural number
+ * the sum of even natural numbers
+ * print a pyramid of numbers
+ */</span>
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> {
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>) </span>{
+        Main main=<span class="hljs-keyword">new</span> Main();
+        main.Sum_of_N();
+        main.Sum_of_N(<span class="hljs-number">100</span>);
+        System.<span class="hljs-keyword">out</span>.println(<span class="hljs-string">"Sum of N natural EVEN numbers with user input "</span>+main.Sum_of_even(<span class="hljs-number">100</span>));
+        System.<span class="hljs-keyword">out</span>.println(<span class="hljs-string">"***********************"</span>);
+        System.<span class="hljs-keyword">out</span>.println(<span class="hljs-string">"Below is the result of pyramid problem"</span>);
+        main.pyramid(<span class="hljs-number">5</span>);
+
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Sum_of_N</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-keyword">int</span> n = <span class="hljs-number">10</span>; <span class="hljs-comment">//n is the number of natural numbers</span>
+        <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
+            sum = sum + i;
+        }
+        System.<span class="hljs-keyword">out</span>.println(<span class="hljs-string">"Sum of N natural numbers is: "</span> + sum);
+
+
+    }<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Sum_of_N</span>(<span class="hljs-params"> <span class="hljs-keyword">int</span> n</span>)</span>{
+        <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
+            sum = sum + i;
+        }
+        System.<span class="hljs-keyword">out</span>.println(<span class="hljs-string">"Sum of N natural numbers with user input: "</span>+n+<span class="hljs-string">" is: "</span> + sum);
+
+    }
+
+    <span class="hljs-comment">/**
+     * complicated way
+     * @param n is the user input, where it can state the number of natural numbers
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Sum_of_even</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> n</span>)</span>{
+
+        ArrayList arrayList=<span class="hljs-keyword">new</span> ArrayList();
+        <span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span>(j&lt;=n){
+            <span class="hljs-comment">//ternary operator to check if the number is even or odd</span>
+            arrayList.<span class="hljs-keyword">add</span>(j%<span class="hljs-number">2</span>==<span class="hljs-number">0</span>?j:<span class="hljs-number">0</span>);<span class="hljs-comment">//if the number is even then add it to the arraylist else add 0</span>
+            j++;
+
+
+
+        }
+        <span class="hljs-comment">/**
+         * uncomment the print statement is you want to check the contents of the arraylist
+         */</span>
+
+<span class="hljs-comment">//        System.out.println("Natural numbers upto: "+n+" are"+arrayList);</span>
+        <span class="hljs-keyword">int</span> sum=<span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;arrayList.size();i++){
+            <span class="hljs-comment">//converting arraylist.get(i) to int</span>
+            <span class="hljs-keyword">int</span> x=(<span class="hljs-keyword">int</span>)arrayList.<span class="hljs-keyword">get</span>(i);
+            sum=sum+x;
+
+        }
+        <span class="hljs-keyword">return</span> sum;
+
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">pyramid</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> n</span>)</span>{
+        <span class="hljs-comment">//n is the number of rows</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++){
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">1</span>;j&lt;=i;j++){
+                System.<span class="hljs-keyword">out</span>.print(j+<span class="hljs-string">" "</span>);
+            }
+            System.<span class="hljs-keyword">out</span>.println();
+        }
+
+    }
+}
+</code></pre><p><img src="img/PyramidsInjava.PNG"></p></body></html>

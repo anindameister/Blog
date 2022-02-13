@@ -1,0 +1,138 @@
+<h2 id="install-yarn">install yarn</h2>
+<ul>
+<li><code>npm install --global yarn</code><h2 id="initialise-next-js-with">initialise next js with</h2>
+-<code>yarn create next-app</code></li>
+<li>had to change the username of the account, helped by <code>https://www.youtube.com/watch?v=w5N2aaiToiQ</code></li>
+<li>change all the name in the environmental variables and then restarted</li>
+</ul>
+<h2 id="move-from-react-to-nextjs-with-this-https-www-youtube-com-watch-v-tf1pueizup0-">move from react to nextjs with this <code>https://www.youtube.com/watch?v=tF1puEIZUP0</code></h2>
+<ul>
+<li>this youtube video didn&#39;t help much</li>
+</ul>
+<h2 id="creating-the-below-display">creating the below display</h2>
+<p><img src="https://github.com/anindameister/ElevaitNextJS/blob/main/photos/1.PNG" alt="ELEVAIT page 1"></p>
+<ul>
+<li>the above display is made possible with the following contents
+```
+import styles from &#39;../styles/Home.module.css&#39;
+import{Fragment} from &#39;react&#39;
+function HomePage(){
+  return (<Fragment><div><pre><code>  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{styles.centering}</span>&gt;</span>Number of documents:<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{styles.foo}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{styles.arrowRight}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre></li>
+</ul>
+<pre><code><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{styles.bottomRight}</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{styles.circular}</span>&gt;</span>+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Fragment</span>&gt;</span>)
+</code></pre><p>}
+export default HomePage</p>
+<pre><code>- <span class="hljs-keyword">the</span> above content has been created <span class="hljs-keyword">as</span> <span class="hljs-keyword">a</span> part <span class="hljs-keyword">of</span> `index.js` <span class="hljs-built_in">file</span> which is under <span class="hljs-keyword">the</span> <span class="hljs-built_in">folder</span> `pages`
+- The below css were added <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">file</span> named, `Home.modules.css` under <span class="hljs-keyword">the</span> <span class="hljs-built_in">folder</span> styles
+</code></pre><p>.foo{
+  position:fixed;
+  left:40%;width:250px;border: 3px solid black;background-color: #f1f1f1;</p>
+<p>}
+.arrowRight {
+  border-top: 16px solid transparent; /<em> border meaning is to draw a line, so we draw a line </em>/
+  border-bottom: 16px solid transparent;/<em>we draw a line here as well and this line has the same length as the line we draw above, which is 16px or 16</em>0.026=0.416cm*/</p>
+<p>  border-left: 16px solid black; /<em> we draw a line here and this line has the same length as the line we draw above, which is 16px or 16</em>0.026=0.416cm. This line is for the left side <em>/
+    margin-left: 215px; /</em> margin left 217px means the div will be centered on the left side of the page. The page here refers to the div within which this is embedded. So 217px is the distance from the starting point <em>/
+}
+.bottomRight{
+  position:relative; /</em>relative means the div will be positioned relative to the page<em>/
+}
+.circular{
+  position:fixed; /</em>relative means the div will be positioned relative to the page(page is the div in here)*/
+        bottom:0%;
+        right:30%;
+        top:50%;</p>
+<pre><code>    <span class="hljs-attribute">width</span>: <span class="hljs-number">50px</span>; <span class="hljs-comment">/*width 100px means the div will be 100px wide*/</span>
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">50px</span>; <span class="hljs-comment">/*height 100px means the div will be 100px high*/</span>
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>; <span class="hljs-comment">/*border-radius 50% means the div will have a circular shape with a radius of 50% of the width of the div*/</span>
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#fff</span>; <span class="hljs-comment">/*background-color #fff means the div will have a white background*/</span>
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">3px</span> solid <span class="hljs-number">#000</span>; <span class="hljs-comment">/*border 3px solid #000 means the div will have a black border with a width of 3px*/</span>
+    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.2</span>),<span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.19</span>); <span class="hljs-comment">/*box-shadow 0 0 0 0 rgba(0,0,0,0.2),0 0 0 0 rgba(0,0,0,0.19) means the div will have a shadow with a width of 0px, a height of 0px, a blur of 0px, a spread of 0px, a color of rgba(0,0,0,0.2), and a color of rgba(0,0,0,0.19)*/</span>
+    <span class="hljs-attribute">text-align</span>: center; <span class="hljs-comment">/*text-align center means the text will be centered*/</span>
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">50px</span>; <span class="hljs-comment">/*line-height 100px means the text will be 100px high*/</span>
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">50px</span>; <span class="hljs-comment">/*font-size 50px means the text will be 50px high*/</span>
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>; <span class="hljs-comment">/*color #000 means the text will be black*/</span>
+    <span class="hljs-attribute">font-weight</span>: bold; <span class="hljs-comment">/*font-weight bold means the text will be bold*/</span>
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">'Arial'</span>; <span class="hljs-comment">/*font-family 'Arial' means the text will be in Arial font*/</span>
+</code></pre><p>}</p>
+<pre><code>- Now, <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> `index.js`, we see <span class="hljs-keyword">the</span> `Fragment`
+- The `fragment` <span class="hljs-keyword">is</span> used <span class="hljs-keyword">to</span> wrap <span class="hljs-keyword">the</span> `component` <span class="hljs-keyword">in</span> a `single element`.
+- Now, what <span class="hljs-keyword">is</span> a component? A component <span class="hljs-keyword">is</span> a function <span class="hljs-keyword">that</span> returns <span class="hljs-keyword">some</span> html.
+- In our case, <span class="hljs-keyword">the</span> HomePage function returns <span class="hljs-keyword">some</span> html.
+- The HomePage function <span class="hljs-keyword">is</span> a component <span class="hljs-keyword">in</span> our case.
+- The fragment <span class="hljs-keyword">is</span> used <span class="hljs-keyword">to</span> wrap <span class="hljs-keyword">the</span> component, <span class="hljs-keyword">in</span> our case, <span class="hljs-keyword">the</span> HomePage function, <span class="hljs-keyword">in</span> a single element.
+- If we would have <span class="hljs-keyword">not</span> used <span class="hljs-keyword">the</span> fragment, <span class="hljs-keyword">the</span> HomePage function would have <span class="hljs-keyword">not</span> been wrapped <span class="hljs-keyword">in</span> a single element.
+- The reason <span class="hljs-keyword">it</span> <span class="hljs-keyword">is</span> important <span class="hljs-keyword">to</span> wrap <span class="hljs-keyword">the</span> component <span class="hljs-keyword">in</span> a single element <span class="hljs-keyword">is</span> because client side rendering <span class="hljs-keyword">is</span> done using <span class="hljs-keyword">the</span> virtual DOM.
+- client side rendering meaning <span class="hljs-keyword">that</span> <span class="hljs-keyword">the</span> browser renders <span class="hljs-keyword">the</span> <span class="hljs-built_in">application</span> <span class="hljs-keyword">on</span> <span class="hljs-keyword">the</span> screen.
+- rendering means <span class="hljs-keyword">to</span> display <span class="hljs-keyword">the</span> <span class="hljs-built_in">application</span> <span class="hljs-keyword">on</span> <span class="hljs-keyword">the</span> screen.
+- &lt;a href=<span class="hljs-string">"https://katiehyenychoi.medium.com/virtual-dom-vs-real-dom-44d442eb2501"</span> target=<span class="hljs-string">"_blank"</span>&gt;difference <span class="hljs-keyword">between</span> vdom &amp; dom&lt;/a&gt; 
+- A view <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> virtual DOM consists <span class="hljs-keyword">of</span> a tree <span class="hljs-keyword">of</span> nodes.
+- The tree <span class="hljs-keyword">of</span> nodes <span class="hljs-keyword">is</span> a representation <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">application</span> <span class="hljs-keyword">that</span> <span class="hljs-keyword">is</span> used <span class="hljs-keyword">by</span> <span class="hljs-keyword">the</span> browser <span class="hljs-keyword">to</span> render <span class="hljs-keyword">the</span> <span class="hljs-built_in">application</span> <span class="hljs-keyword">on</span> <span class="hljs-keyword">the</span> screen.
+- The nodes <span class="hljs-keyword">of</span> this tree are <span class="hljs-keyword">as</span> follows:
+<span class="hljs-number">1.</span> The root node <span class="hljs-keyword">is</span> <span class="hljs-keyword">the</span> document node. The document node <span class="hljs-keyword">contains</span> <span class="hljs-keyword">the</span> head node <span class="hljs-keyword">and</span> <span class="hljs-keyword">the</span> body node.
+<span class="hljs-number">2.</span> The head node <span class="hljs-keyword">contains</span> <span class="hljs-keyword">the</span> title node.
+<span class="hljs-number">3.</span> The body node <span class="hljs-keyword">contains</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">div</span> node.
+<span class="hljs-number">4.</span> The <span class="hljs-keyword">div</span> node <span class="hljs-keyword">contains</span> <span class="hljs-keyword">the</span> h1 node.
+<span class="hljs-number">5.</span> The h1 node <span class="hljs-keyword">contains</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">text</span> node.
+<span class="hljs-number">6.</span> The <span class="hljs-built_in">text</span> node <span class="hljs-keyword">contains</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">text</span> <span class="hljs-string">"Number of documents:"</span>.
+- Coming <span class="hljs-keyword">back</span>, &lt;a href=<span class="hljs-string">"https://stackoverflow.com/questions/54665999/why-return-multiple-elements-in-react-is-not-allowed"</span>&gt;When you <span class="hljs-literal">return</span> multiple elements <span class="hljs-keyword">from</span> React elements <span class="hljs-keyword">from</span> <span class="hljs-keyword">the</span> render method, <span class="hljs-keyword">the</span> assumtion <span class="hljs-keyword">that</span> <span class="hljs-keyword">the</span> tree will have one root node <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> Component will <span class="hljs-keyword">not</span> longer hold, hence making <span class="hljs-keyword">it</span> difficult <span class="hljs-keyword">to</span> process reconcilation algorithm.&lt;/a&gt;
+<span class="hljs-comment">## `DocumentPage.js`&lt;- This was the initial name and later it was changed to a dynamic file named `[doc_ID].js`</span>
+- The reason <span class="hljs-keyword">is</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">below</span> photo
+- According <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> photo, <span class="hljs-keyword">it</span> demands <span class="hljs-keyword">the</span> next page <span class="hljs-keyword">to</span> be dynamic
+![ELEVAIT mockup view](<span class="hljs-string">"NextJS\my-app\photos\1.PNG"</span>)
+- The <span class="hljs-keyword">below</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">the</span> code <span class="hljs-keyword">for</span> `DocumentPage.js`
+</code></pre><p>function DocumentPage(){</p>
+<pre><code><span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Document 1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+</code></pre><p>}
+export default DocumentPage</p>
+<pre><code>-<span class="ruby"> In the above, it is just a static look
+</span>-<span class="ruby"> <span class="hljs-keyword">if</span> we would have done <span class="hljs-string">`http://localhost:3000/DocumentPage`</span>, <span class="hljs-keyword">then</span> we would have seen the obvious content
+</span>-<span class="ruby"> Now, we will attempt to make this page dynamic
+</span>-<span class="ruby"> we renamed from <span class="hljs-string">`DocumentPage.js`</span> to <span class="hljs-string">`[doc_ID].js`</span>
+</span>-<span class="ruby"> This tells nextJS that it is a dynamic page
+</span>-<span class="ruby"> to check the dynamicity we did, <span class="hljs-string">`http://localhost:3000/aninda`</span> <span class="hljs-keyword">and</span> we got the same view as <span class="hljs-string">`http://localhost:3000/DocumentPage`</span>
+</span>-<span class="ruby"> we tried again with <span class="hljs-string">`http://localhost:3000/arunava`</span> <span class="hljs-keyword">and</span> the same result
+</span>-<span class="ruby"> Now, <span class="hljs-keyword">if</span> we want to see what has been passed by the user within the browser, we open the <span class="hljs-string">`developer option`</span>
+</span>-<span class="ruby"> In order to proceed, let<span class="hljs-string">'s change the code a bit by introducing the changes as below
+</span></span>-<span class="ruby"><span class="hljs-string"> `import{useRouter} from '</span><span class="hljs-keyword">next</span>/router<span class="hljs-string">'`
+</span></span>-<span class="ruby"><span class="hljs-string"> `const router=useRouter()`
+</span></span>-<span class="ruby"><span class="hljs-string"> `console.log(router.query.doc_ID)`</span></span>
+</code></pre><p>import{useRouter} from &#39;next/router&#39;
+function DocumentPage(){</p>
+<pre><code><span class="hljs-keyword">const</span> router=useRouter()
+<span class="hljs-built_in">console</span>.log(router.query.doc_ID) 
+<span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Document 1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+</code></pre><p>}
+export default DocumentPage</p>
+<pre><code>- &lt;a href=<span class="hljs-string">"https://www.youtube.com/watch?v=BYbgopx44vo&amp;feature=emb_imp_woyt
+"</span>&gt;let's recollect <span class="hljs-keyword">the</span> usage <span class="hljs-keyword">of</span> vdom <span class="hljs-keyword">with</span> <span class="hljs-keyword">the</span> robot <span class="hljs-keyword">and</span> human named view story&lt;/a&gt;
+- <span class="hljs-keyword">for</span> now, I am going <span class="hljs-keyword">to</span> consider `vdom` <span class="hljs-keyword">as</span> <span class="hljs-keyword">the</span> `compiler` <span class="hljs-keyword">and</span> `dom` <span class="hljs-keyword">as</span> <span class="hljs-keyword">the</span> `jvm`
+- `jvm` <span class="hljs-keyword">does</span> things <span class="hljs-keyword">in</span> detail <span class="hljs-keyword">and</span> so <span class="hljs-keyword">if</span> you have `several image tags inside a <span class="hljs-keyword">div</span>` <span class="hljs-keyword">and</span> you `replace one <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> images inside <span class="hljs-keyword">with</span> a different image source`, <span class="hljs-keyword">the</span> `DOM(also known <span class="hljs-keyword">to</span> <span class="hljs-keyword">me</span> <span class="hljs-keyword">as</span> JVM)` re-renders <span class="hljs-keyword">the</span> entire <span class="hljs-keyword">div</span>. This <span class="hljs-keyword">is</span> because, whatever <span class="hljs-keyword">it</span> <span class="hljs-keyword">does</span>, <span class="hljs-keyword">it</span> <span class="hljs-keyword">does</span> <span class="hljs-keyword">it</span> <span class="hljs-keyword">in</span> great detail.
+- To address this problem, <span class="hljs-keyword">the</span> React developers came up <span class="hljs-keyword">with</span> an idea `<span class="hljs-keyword">to</span> manipulate <span class="hljs-keyword">the</span> VDOM` instead which <span class="hljs-keyword">is</span> faster <span class="hljs-keyword">since</span> nothing gets drawn <span class="hljs-keyword">on</span> your browser unless allowed <span class="hljs-keyword">by</span> <span class="hljs-keyword">the</span> JVM which makes this browser, platform independent. 
+
+<span class="hljs-comment">### `why did we bring in jvm,compiler concept from java to again talk about vdom and dom`</span>
+- This <span class="hljs-keyword">is</span> because we want <span class="hljs-keyword">to</span> explain `what <span class="hljs-keyword">and</span> why do we see two things <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> console` because <span class="hljs-keyword">of</span> `console.<span class="hljs-built_in">log</span>(router.query.doc_ID)`
+</code></pre><p>undefined
+aninda</p>
+<pre><code>- we <span class="hljs-built_in">get</span> `undefined` because <span class="hljs-keyword">of</span> `compiler` which scans <span class="hljs-keyword">the</span> <span class="hljs-keyword">whole</span> page <span class="hljs-keyword">first</span>
+- <span class="hljs-keyword">and</span> <span class="hljs-keyword">then</span> we see `aninda` because <span class="hljs-keyword">of</span> `jvm` which scans <span class="hljs-built_in">line</span> <span class="hljs-keyword">by</span> <span class="hljs-built_in">line</span>.
+</code></pre><p>import{useRouter} from &#39;next/router&#39;</p>
+<ul>
+<li>useRouter is a hook</li>
+<li>hook is a function that returns a state</li>
+<li>state is a variable that can be used in react component.</li>
+<li>React component is a function that returns some html</li>
+<li>React component is a function which contains one or many react hooks</li>
+<li>useRouter is imported from next/router</li>
+<li>next/router is a router within next.js</li>
+<li>router is a function that returns a history object</li>
+<li>history object is a collection of functions which are used to navigate the application</li>
+<li>navigating an application is a process of changing the url
+```</li>
+</ul>

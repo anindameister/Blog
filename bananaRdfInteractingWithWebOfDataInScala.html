@@ -1,0 +1,41 @@
+<h1 id="banana-rdf-interacting-with-the-web-of-data-in-scala">banana-rdf: Interacting with the Web of Data in Scala</h1>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=RsJHr0sEdDI">https://www.youtube.com/watch?v=RsJHr0sEdDI</a></li>
+</ul>
+<h4 id="goals-of-the-video">goals of the video</h4>
+<ul>
+<li>Rdf and linked data </li>
+<li>we&#39;ll find out what banana-rdf is solving in this area</li>
+<li>technical things in banana-rdf in terms of scala</li>
+<li>scala.js</li>
+</ul>
+<h2 id="understanding-rdf-and-linked-data">Understanding RDF and linked data</h2>
+<ul>
+<li>The browser says okay, I understand HTML, so could you send me the data, Mr. Server?</li>
+<li><code>curl -H &#39;Accept: text/html&#39; http://bertails.org/alex</code></li>
+<li>Now let&#39;s consider turtle which is one of the serialisation of RDF, there are other ones as well</li>
+<li><code>curl -H &#39;Accept: text/turtle&#39; http://bertails.org/alex</code></li>
+<li><code>Serialization converts an object into a persistent form. The RDF/XML syntax provides a means of documenting an RDF model in a text-based format, literally serializing the model using XML. This means that the content must both meet all requirements for well-formed XML and the additional constraints of RDF.</code></li>
+<li><code>http://etutorials.org/Misc/Practical+resource+description+framework+rdf/Chapter+3.+The+Basic+Elements+Within+the+RDF+XML+Syntax/3.1+Serializing+RDF+to+XML/#:~:text=Serialization%20converts%20an%20object%20into,the%20additional%20constraints%20of%20RDF.</code></li>
+</ul>
+<a href="img/bananaRdfInteractingWithWebOfDataInScala.PNG>abc</a>
+<ul>
+<li>so with the above command, instead of html, we are asking for the turtle file</li>
+<li>The above photo is RDF data expressed in turtle</li>
+<li>here&#39;s an example of an uri, <code>&lt;http://bertails.org/alex#me&gt;</code></li>
+<li><code>In programming language design, a first-class citizen in a given programming language is an entity which supports all the operations generally available to other entities. These operations typically include being passed as an argument, returned from a function, and assigned to a variable</code></li>
+<li><code>URIs are first class citizens of RDF</code></li>
+<li><code>what is the meaning of</code>URI is first class citizen of RDF`??</li>
+</ul>
+<p>Could you please validate if my understanding is correct or not?</p>
+<p>In RDF design, a URI in a given RDF is an entity which supports all the operations generally available to other entities such as subject,predicate,object.So, URIs can be passed as an argument, returned from a function and assigned to a variable`</p>
+<ul>
+<li><code>URL stands for Uniform Resource Locator. URI stands for Uniform Resource Identifier. URL is a subset of URI that specifies where a resource is exists and the mechanism for retrieving it. A URI is a superset of URL that identifies a resource either by URL or URN (Uniform Resource Name) or both.</code></li>
+<li><code>Linked data is just RDF with http</code></li>
+<li><code>rdf libraries in the java world are jena and sesame</code></li>
+<li>The api associated to RDF and linked data was really meant for the SPARQL engines</li>
+<li>The reason, Tim Berner&#39;s Lee&#39;s guy moved to Scala is because there were limitations both in terms of jena and sesame`</li>
+<li>the notion of graph with banana-rdf and scala is immutable. And this graph could be associated to Java&#39;s jena&#39;s <code>model</code></li>
+<li>way better api to handle triples in the graph with the use of scala</li>
+<li><code>BNode</code> is a node with no name. I can associate this to blank node. Yes, that&#39;s what it is.</li>
+</ul>
